@@ -30,7 +30,7 @@ def convert_video():
             }],
             'outtmpl': os.path.join(DOWNLOAD_FOLDER, '%(title)s.%(ext)s'),
             'quiet': True,
-            'cookies': os.path.join(os.getcwd(), 'cookies.txt'),
+            'cookies_from_browser': ('chrome',),
         }
 
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
